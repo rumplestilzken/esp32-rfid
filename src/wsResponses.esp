@@ -177,7 +177,8 @@ void ICACHE_FLASH_ATTR sendStatus(AsyncWebSocketClient *client)
 
 		root["ip"] = printIP(WiFi.softAPIP());
 		root["gateway"] = printIP(config.gatewayIp);
-		root["netmask"] = printIP(config.wifiApSubnet);
+		IPAddress address;
+		root["netmask"] = printIP(address.fromString(config.wifiApSubnet));
 	}
 	else
 	{
