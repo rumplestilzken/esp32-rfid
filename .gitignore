@@ -91,3 +91,4 @@ ESP-Debug
 ethernet
 bin/*.bin
 
+bin/wifi-debug.bin
